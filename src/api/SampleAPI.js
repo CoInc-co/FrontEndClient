@@ -7,12 +7,9 @@ export function getSample() {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    "Accept": "application/json"
                 },
                 body: JSON.stringify(data)
             };
-
-            console.log(header);
 
             let apiURL = "http://localhost:8080/API/sample";
 

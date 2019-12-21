@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      response: "hey"
+      response: "hold pls"
     };
   }
 
@@ -16,7 +16,7 @@ class App extends React.Component {
   componentDidMount() {
     document.title = Constants.TITLE;
     console.log("This browser " + (Utils.checkLocalStorage() ? "has HTML5 Local Storage!" : "does not support Local Storage..."));
-    API.getSample().then(result => console.log(result));
+    API.getSample().then(result => result.json()).then(json => this.setState({response: JSON.stringify(json)}));
   }
 
   render() {
