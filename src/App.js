@@ -25,7 +25,7 @@ class App extends React.Component {
     return (
         <div className="App">
           <NavBar/>
-          <p>
+          <p className="text">
               The response from the API is {this.state.response}
           </p>
         </div>
