@@ -16,7 +16,9 @@ class App extends React.Component {
   componentDidMount() {
     document.title = Constants.TITLE;
     console.log("This browser " + (Utils.checkLocalStorage() ? "has HTML5 Local Storage!" : "does not support Local Storage..."));
-    API.getSample().then(result => result.json()).then(json => this.setState({response: JSON.stringify(json)}));
+    API.getAll().then(result => result.json()).then(json => this.setState({response: JSON.stringify(json)}));
+    API.postSample().then(result => result.json()).then(json => console.log(json));
+    API.getAll().then(result => result.json()).then(json => console.log(json));
   }
 
   render() {

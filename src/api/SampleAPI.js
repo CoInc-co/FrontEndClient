@@ -1,7 +1,9 @@
-export function getSample() {
+import * as Utils from '../utility/Utils';
+
+export function postSample() {
     return new Promise(
         function (resolve, reject) {
-            let data = {"first": 5, "second": 4};
+            let data = {"first": Utils.randomInteger(5, 25), "second": Utils.randomInteger(50, 250)};
 
             let header = {
                 method: "POST",
@@ -20,6 +22,25 @@ export function getSample() {
     );
 }
 
+export function getAll() {
+    return new Promise(
+        function (resolve, reject) {
+            let header = {
+                method: "GET",
+                headers: {
+                    "Accept": "application/json"
+                },
+            };
+
+            let apiURL = "http://localhost:8080/API/getAll";
+
+            fetch(apiURL, header)
+                .then(result => resolve(result))
+                .catch(err => reject(err));
+        }
+    );
+}
+
 export function getHello() {
     return new Promise(
         function (resolve, reject) {
@@ -30,7 +51,9 @@ export function getHello() {
                 },
             };
 
-            fetch("http://localhost:8080/API/hello?name=Cody", header)
+            let apiURL = "http://localhost:8080/API/hello?name=Cody";
+
+            fetch(apiURL, header)
                 .then(result => resolve(result));
         }
     );
