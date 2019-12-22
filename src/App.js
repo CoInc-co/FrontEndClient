@@ -24,11 +24,9 @@ class App extends React.Component {
   render() {
     return (
         <div className="App">
-          <header className="App-header">
-          </header>
           <NavBar/>
           <p>
-            The response from the API is {this.state.response}
+              The response from the API is {this.state.response}
           </p>
         </div>
     );
