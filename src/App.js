@@ -1,4 +1,5 @@
 import React from 'react';
+import NavBar from './components/navigation/NavBar';
 import './App.css';
 import * as Constants from './utility/Constants';
 import * as Utils from './utility/Utils';
@@ -12,7 +13,6 @@ class App extends React.Component {
     };
   }
 
-
   componentDidMount() {
     document.title = Constants.TITLE;
     console.log("This browser " + (Utils.checkLocalStorage() ? "has HTML5 Local Storage!" : "does not support Local Storage..."));
@@ -25,10 +25,11 @@ class App extends React.Component {
     return (
         <div className="App">
           <header className="App-header">
-            <p>
-              The response from the API is {this.state.response}
-            </p>
           </header>
+          <NavBar/>
+          <p>
+            The response from the API is {this.state.response}
+          </p>
         </div>
     );
   }
