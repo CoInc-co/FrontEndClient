@@ -1,36 +1,43 @@
 import React from 'react';
-import NavBar from './components/navigation/NavBar';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import * as Constants from './utility/Constants';
 import * as Utils from './utility/Utils';
-import * as API from './api/SampleAPI';
+import NavBar from './components/navigation/NavBar';
+import HomePage from './pages/HomePage';
+import TestAPIPage from "./pages/TestAPIPage";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      response: "hold pls"
-    };
-  }
+    constructor(props) {
+        super(props);
+    }
 
-  componentDidMount() {
-    document.title = Constants.TITLE;
-    console.log("This browser " + (Utils.checkLocalStorage() ? "has HTML5 Local Storage!" : "does not support Local Storage..."));
-    API.getSample().then(result => result.json()).then(json => this.setState({response: JSON.stringify(json)}));
-  }
+    componentDidMount() {
+        document.title = Constants.TITLE;
+        console.log("This browser " + (Utils.checkLocalStorage() ? "has HTML5 Local Storage!" : "does not support Local Storage..."));
+    }
 
-  render() {
-    return (
-        <div className="App">
-          <header className="App-header">
-          </header>
-          <NavBar/>
-          <p>
-            The response from the API is {this.state.response}
-          </p>
-        </div>
-    );
-  }
+    /**
+     * Returns a default template with the current content based on the URL routed page.
+     * If page is not found, it redirects to the home page. TODO (Probably should go to page not found [404?] error)
+     *
+     * @returns {HTMLAllCollection} Collection of HTML components that are displayed at this route
+     */
+    render() {
+        return (
+            <Router>
+                <div className="App">
+                    <NavBar/>
+                    <Switch>
+                        <Route exact path = "/" component = {HomePage} />
+                        <Route path = "/testapi" component= {TestAPIPage} />
+                        <Route component= {HomePage} />
+                    </Switch>
+                </div>
+            </Router>
+        );
+        // TODO Put footer underneath </Switch>
+    }
 }
 
 export default App;
