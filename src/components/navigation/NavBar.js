@@ -1,5 +1,6 @@
 import React from 'react';
 import './NavBar.css';
+
 class NavBar extends React.Component
 {
     componentDidMount() {
@@ -13,24 +14,24 @@ class NavBar extends React.Component
                 <nav id = "navBar" className="menu">
                     <header id = "navHeader">Menu <span>×</span></header>
                     <ol id = "navElements">
-                        <li className="menu-item" onClick={() => window.location.href='/'}><a href="#0">Home</a></li>
+                        <li className="menu-item"><a href="/">Home</a></li>
                         <li className="menu-item"><a>Connor Wolanski</a>
                             <ol className="sub-menu">
-                                <li className="menu-item" onClick={() => window.location.href='/'}><a href="#0">About</a></li>
-                                <li className="menu-item" onClick={() => window.location.href='/'}><a href="#0">Resume</a></li>
-                                <li className="menu-item" onClick={() => window.location.href='/'}><a href="#0">Projects</a></li>
+                                <li className="menu-item"><a href="/">About</a></li>
+                                <li className="menu-item"><a href="/">Resume</a></li>
+                                <li className="menu-item"><a href="/">Projects</a></li>
                             </ol>
                         </li>
                         <li className="menu-item"><a>Cody Alexander</a>
                             <ol className="sub-menu">
-                                <li className="menu-item" onClick={() => window.location.href='/'}><a href="#0">About</a></li>
-                                <li className="menu-item" onClick={() => window.location.href='/'}><a href="#0">Resume</a></li>
-                                <li className="menu-item" onClick={() => window.location.href='/'}><a href="#0">Projects</a></li>
+                                <li className="menu-item"><a href="/">About</a></li>
+                                <li className="menu-item"><a href="/">Resume</a></li>
+                                <li className="menu-item"><a href="/">Projects</a></li>
                             </ol>
                         </li>
-                        <li className="menu-item" onClick={() => window.location.href='/'}><a href="#0">Demo1</a></li>
-                        <li className="menu-item" onClick={() => window.location.href='/'}><a href="#0">Demo2</a></li>
-                        <li className="menu-item" onClick={() => window.location.href='/testapi'}><a href="#0">API Test Page</a></li>
+                        <li className="menu-item"><a href="/">Demo1</a></li>
+                        <li className="menu-item"><a href="/">Demo2</a></li>
+                        <li className="menu-item"><a href="/testapi">API Test Page</a></li>
                     </ol>
                     <footer>
                         <button aria-label="Toggle Menu" id= 'navButton'>Toggle</button>

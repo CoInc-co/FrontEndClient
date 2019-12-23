@@ -1,11 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import './App.css';
 import * as Constants from './utility/Constants';
 import * as Utils from './utility/Utils';
+
 import NavBar from './components/navigation/NavBar';
+import Footer from './components/footer/Footer';
 import HomePage from './pages/HomePage';
 import TestAPIPage from "./pages/TestAPIPage";
+
 
 class App extends React.Component {
     componentDidMount() {
@@ -29,6 +33,7 @@ class App extends React.Component {
                         <Route path = "/testapi" component= {TestAPIPage} />
                         <Route component= {HomePage} />
                     </Switch>
+                    <Footer/>
                 </div>
             </Router>
         );
