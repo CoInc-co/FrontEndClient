@@ -17,6 +17,8 @@ nav {
     position: relative;
     width: 220px;
     margin: 20px;
+    transition: max-height 1s linear;
+    max-height: 2000px;
 }
 nav ol {
     list-style-type: none;
@@ -88,6 +90,9 @@ nav.closed header {
     transform: translateY(calc(var(--top) * -1px)) scaleY(0.1) scaleX(0.2);
     transition-delay: var(--delay-in);
     color: transparent;
+}
+nav.closed {
+    max-height: 30px;
 }
 nav.closed footer button {
     transition-delay: 0s;

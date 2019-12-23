@@ -9,33 +9,31 @@ class NavBar extends React.Component
     render()
     {
         return(
-            <div>
-                <nav id = "navBar" className="menu">
-                    <header id = "navHeader">Menu <span>×</span></header>
-                    <ol id = "navElements">
-                        <li className="menu-item"><a href="#0">Home</a></li>
-                        <li className="menu-item"><a>Connor Wolanski</a>
-                            <ol className="sub-menu">
-                                <li className="menu-item"><a href="#0">About</a></li>
-                                <li className="menu-item"><a href="#0">Resume</a></li>
-                                <li className="menu-item"><a href="#0">Projects</a></li>
-                            </ol>
-                        </li>
-                        <li className="menu-item"><a>Cody Alexander</a>
-                            <ol className="sub-menu">
-                                <li className="menu-item"><a href="#0">About</a></li>
-                                <li className="menu-item"><a href="#0">Resume</a></li>
-                                <li className="menu-item"><a href="#0">Projects</a></li>
-                            </ol>
-                        </li>
-                        <li className="menu-item"><a href="#0">Demo1</a></li>
-                        <li className="menu-item"><a href="#0">Demo2</a></li>
-                    </ol>
-                    <footer>
-                        <button aria-label="Toggle Menu" id= 'navButton'>Toggle</button>
-                    </footer>
-                </nav>
-            </div>
+            <nav id = "navBar" className="menu">
+                <header id = "navHeader">Menu <span>×</span></header>
+                <ol id = "navElements">
+                    <li className="menu-item"><a href="#0">Home</a></li>
+                    <li className="menu-item"><a>Connor Wolanski</a>
+                        <ol className="sub-menu">
+                            <li className="menu-item"><a href="#0">About</a></li>
+                            <li className="menu-item"><a href="#0">Resume</a></li>
+                            <li className="menu-item"><a href="#0">Projects</a></li>
+                        </ol>
+                    </li>
+                    <li className="menu-item"><a>Cody Alexander</a>
+                        <ol className="sub-menu">
+                            <li className="menu-item"><a href="#0">About</a></li>
+                            <li className="menu-item"><a href="#0">Resume</a></li>
+                            <li className="menu-item"><a href="#0">Projects</a></li>
+                        </ol>
+                    </li>
+                    <li className="menu-item"><a href="#0">Demo1</a></li>
+                    <li className="menu-item"><a href="#0">Demo2</a></li>
+                </ol>
+                <footer>
+                    <button aria-label="Toggle Menu" id= 'navButton'>Toggle</button>
+                </footer>
+            </nav>
         );
     }
 }
