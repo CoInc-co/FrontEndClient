@@ -1,3 +1,25 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 100%;
+    line-height: 1.5;
+}
+html, body { /* TODO Cant be generic */
+    height: 100%;
+}
+body {
+    background: #222222;
+    margin: 0;
+    background-size: cover;
+}
 .text{
     color: white;
+}
+.whole-view {
+    min-height: 100vh;
+    position: relative;
+}
+.content-wrap {
+    padding-bottom: 55px;
 }

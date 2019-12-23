@@ -8,9 +8,11 @@ class HomePage extends React.Component {
 
     render() {
         return(
-            <header className="text">
-                This is a header for home page.
-            </header>
+            <div>
+                <p className='text'>
+                    This is a header for home page.
+                </p>
+            </div>
         );
     }
 }

@@ -26,13 +26,15 @@ class App extends React.Component {
     render() {
         return (
             <Router>
-                <div className="App">
+                <div className="whole-view">
                     <NavBar/>
-                    <Switch>
-                        <Route exact path = "/" component = {HomePage} />
-                        <Route path = "/testapi" component= {TestAPIPage} />
-                        <Route component= {HomePage} />
-                    </Switch>
+                    <div className='content-wrap'>
+                        <Switch>
+                            <Route exact path = "/" component = {HomePage} />
+                            <Route path = "/testapi" component= {TestAPIPage} />
+                            <Route component= {HomePage} />
+                        </Switch>
+                    </div>
                     <Footer/>
                 </div>
             </Router>
