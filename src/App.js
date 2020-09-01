@@ -9,6 +9,7 @@ import NavBar from './components/navigation/NavBar';
 import Footer from './components/footer/Footer';
 import HomePage from './pages/HomePage';
 import TestAPIPage from "./pages/TestAPIPage";
+import Hailey from "./pages/Hailey";
 
 
 class App extends React.Component {
@@ -27,19 +28,17 @@ class App extends React.Component {
         return (
             <Router>
                 <div className="whole-view">
-                    <NavBar/>
                     <div className='content-wrap'>
                         <Switch>
                             <Route exact path = "/" component = {HomePage} />
+                            <Route path = "/hailey" component = {Hailey} />
                             <Route path = "/testapi" component= {TestAPIPage} />
                             <Route component= {HomePage} />
                         </Switch>
                     </div>
-                    <Footer/>
                 </div>
             </Router>
         );
-        // TODO Put footer underneath </Switch>
     }
 }
 

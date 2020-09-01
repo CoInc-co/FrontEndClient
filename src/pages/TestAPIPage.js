@@ -1,6 +1,8 @@
 import React from "react";
 import '../App.css';
 import * as API from "../api/SampleAPI";
+import NavBar from "../components/navigation/NavBar";
+import Footer from "../components/footer/Footer";
 
 class TestAPIPage extends React.Component {
     constructor(props) {
@@ -18,9 +20,13 @@ class TestAPIPage extends React.Component {
 
     render() {
         return(
-            <p className="text">
-                The response from the API is {this.state.response}
-            </p>
+            <div>
+                <NavBar/>
+                <p className="text">
+                    The response from the API is {this.state.response}
+                </p>
+                <Footer/>
+            </div>
         );
     }
 }
