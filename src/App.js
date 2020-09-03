@@ -1,17 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import './App.css';
 import * as Constants from './utility/Constants';
 import * as Utils from './utility/Utils';
-import NavBar from './components/navigation/NavBar';
+
 import HomePage from './pages/HomePage';
 import TestAPIPage from "./pages/TestAPIPage";
+import Hailey from "./pages/Hailey";
+
 
 class App extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
         document.title = Constants.TITLE;
         console.log("This browser " + (Utils.checkLocalStorage() ? "has HTML5 Local Storage!" : "does not support Local Storage..."));
@@ -26,17 +25,18 @@ class App extends React.Component {
     render() {
         return (
             <Router>
-                <div className="App">
-                    <NavBar/>
-                    <Switch>
-                        <Route exact path = "/" component = {HomePage} />
-                        <Route path = "/testapi" component= {TestAPIPage} />
-                        <Route component= {HomePage} />
-                    </Switch>
+                <div className="whole-view">
+                    <div className='content-wrap'>
+                        <Switch>
+                            <Route exact path = "/" component = {HomePage} />
+                            <Route path = "/hailey" component = {Hailey} />
+                            <Route path = "/testapi" component= {TestAPIPage} />
+                            <Route component= {HomePage} />
+                        </Switch>
+                    </div>
                 </div>
             </Router>
         );
-        // TODO Put footer underneath </Switch>
     }
 }
 

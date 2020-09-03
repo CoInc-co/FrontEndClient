@@ -1,17 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
-* {
-    font-family: 'Open Sans', sans-serif;
-    box-sizing: border-box;
-    color: #333;
-    font-size: 100%;
-    line-height: 1.5;
-}
-body {
-    background: #333333;
-    margin: 0;
-    background-size: cover;
-}
-nav {
+.menu {
     --duration: .5s;
     --easing: ease-in-out;
     position: relative;
@@ -20,15 +7,15 @@ nav {
     transition: max-height 1s linear;
     max-height: 2000px;
 }
-nav ol {
+.sub-menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-nav li {
+.menu-item {
     margin: -4px 0 0 0;
 }
-nav a {
+.text-format {
     display: block;
     text-decoration: none;
     background: #fff;
@@ -38,20 +25,20 @@ nav a {
     border-radius: 4px;
     padding: 1em 1.52em;
 }
-nav a:hover {
+.text-format:hover {
     background: #efefef;
 }
-nav .sub-menu a {
+.sub-menu-item {
     font-size: .9em;
     color: #666666;
     border-left: 2em solid white;
     padding: .75em;
     background: linear-gradient(to right, #dddddd 2px, #ffffff 2px);
 }
-nav .sub-menu a:hover {
+.sub-menu-item:hover {
     background: linear-gradient(to right, #dddddd 2px, #efefef 2px);
 }
-nav header {
+.header-tab {
     font-weight: 600;
     display: block;
     background: rgba(255, 255, 255, 0.5);
@@ -61,7 +48,7 @@ nav header {
     border-radius: 4px;
     padding: 1em 1.52em;
 }
-nav header span {
+.toggle-span {
     border: none;
     background: transparent;
     font-size: 1.5em;
@@ -70,7 +57,7 @@ nav header span {
     line-height: 1;
     float: right;
 }
-nav footer button {
+.toggle-button {
     position: absolute;
     top: 0;
     left: 0;
@@ -85,8 +72,8 @@ nav footer button {
     background: #cdcdcd;
     opacity: 0;
 }
-nav.closed a,
-nav.closed header {
+.text-format.closed,
+.header-tab.closed {
     transform: translateY(calc(var(--top) * -1px)) scaleY(0.1) scaleX(0.2);
     transition-delay: var(--delay-in);
     color: transparent;

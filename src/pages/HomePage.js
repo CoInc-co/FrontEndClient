@@ -1,20 +1,22 @@
 import React from "react";
 import '../App.css';
+import Footer from "../components/footer/Footer";
+import NavBar from "../components/navigation/NavBar";
 
 class HomePage extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
 
     }
 
     render() {
         return(
-            <header className="text">
-                This is a header for home page.
-            </header>
+            <div>
+                <NavBar/>
+                <p className='text'>
+                    This is a header for home page.
+                </p>
+                <Footer/>
+            </div>
         );
     }
 }

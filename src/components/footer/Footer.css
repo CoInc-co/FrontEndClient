@@ -1,0 +1,18 @@
+.footer-layout {
+    position: absolute;
+    bottom: 0;
+    background: aqua;
+    width: 100%;
+}
+.center {
+    margin: auto;
+}
+.half-width {
+    width: 50%;
+}
+.card {
+    border: 3px solid red;
+}
+.inline {
+    display: inline-flex;
+}
