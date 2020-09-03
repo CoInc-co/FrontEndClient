@@ -30,7 +30,7 @@ class NavBar extends React.Component
                             </ol>
                         </li>
                         <li className="menu-item"><a href="/" className='text-format'>Demo1</a></li>
-                        <li className="menu-item"><a href="/" className='text-format'>Demo2</a></li>
+                        <li className="menu-item"><a href="/Hailey" className='text-format'>Hailey</a></li>
                         <li className="menu-item"><a href="/testapi" className='text-format'>API Test Page</a></li>
                     </ol>
                     <footer>
