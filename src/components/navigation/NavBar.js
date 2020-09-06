@@ -13,22 +13,22 @@ class NavBar extends React.Component
             <nav id = "navBar" className="menu">
                 <header id = "navHeader">Menu <span>×</span></header>
                 <ol id = "navElements">
-                    <li className="menu-item"><a href="#0">Home</a></li>
+                    <li className="menu-item"><a href="/">Home</a></li>
                     <li className="menu-item"><a>Connor Wolanski</a>
                         <ol className="sub-menu">
-                            <li className="menu-item"><a href="#0">About</a></li>
-                            <li className="menu-item"><a href="#0">Resume</a></li>
-                            <li className="menu-item"><a href="#0">Projects</a></li>
+                            <li className="menu-item"><a href="/">About</a></li>
+                            <li className="menu-item"><a href="/">Resume</a></li>
+                            <li className="menu-item"><a href="/">Projects</a></li>
                         </ol>
                     </li>
                     <li className="menu-item"><a>Cody Alexander</a>
                         <ol className="sub-menu">
-                            <li className="menu-item"><a href="#0">About</a></li>
-                            <li className="menu-item"><a href="#0">Resume</a></li>
-                            <li className="menu-item"><a href="#0">Projects</a></li>
+                            <li className="menu-item"><a href="/">About</a></li>
+                            <li className="menu-item"><a href="/">Resume</a></li>
+                            <li className="menu-item"><a href="/">Projects</a></li>
                         </ol>
                     </li>
-                    <li className="menu-item"><a href="#0">Demo1</a></li>
+                    <li className="menu-item"><a href="/">Demo1</a></li>
                     <li className="menu-item"><a href="/Hailey">Hailey</a></li>
                     <li className="menu-item"><a href="/testapi">API Test Page</a></li>
                 </ol>
