@@ -13,9 +13,12 @@ class TestAPIPage extends React.Component {
     }
 
     componentDidMount() {
-        API.getAll().then(result => result.json()).then(json => this.setState({response: JSON.stringify(json)}));
-        API.postSample().then(result => result.json()).then(json => console.log(json));
-        API.getAll().then(result => result.json()).then(json => console.log(json));
+        API.getAll().then(result => result.json()).then(json => {
+            this.setState({response: JSON.stringify(json)})
+            console.log(json);
+        });
+        //API.postSample().then(result => result.json()).then(json => console.log(json));
+        //API.getAll().then(result => result.json()).then(json => console.log(json));
     }
 
     render() {
