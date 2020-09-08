@@ -32,7 +32,7 @@ export function getAll() {
                 },
             };
 
-            let apiURL = "http://localhost:8080/API/getAll";
+            let apiURL = "http://localhost:3001/api/";
 
             fetch(apiURL, header)
                 .then(result => resolve(result))
